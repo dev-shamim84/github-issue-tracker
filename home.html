@@ -19,7 +19,7 @@
 <body class="bg-[#F8FAFC]">
   <header class="bg-[#E9E9E9] py-3">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="flex flex-col gap-3 md:flex-row justify-between items-center">
         <div>
           <h2 class="flex gap-2 items-center"><img class="w-[40px]" src="./assets/github-logo.png" alt=""><span
               class="font-bold text-xl">GitHub Issues
@@ -40,7 +40,7 @@
     </div>
   </header>
   <section class="py-10">
-    <div class="container mx-auto px-10">
+    <div class="container mx-auto px-4 lg:px-10">
       <div class="bg-gray-100/20 p-4  shadow rounded">
         <div class="flex flex-wrap gap-4">
           <button onclick="activeButton('all')" id="all"
@@ -72,11 +72,15 @@
   </section>
   <!-- card section -->
   <section>
-    <div class="container mx-auto px-10">
+    <div class="container mx-auto px-4 lg:px-10">
+
+      <div id="loading" class="flex justify-center items-center hidden">
+        <span class="loading loading-bars loading-xl"></span>
+      </div>
+
       <div id="card-container"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 bg-gray-100/20 p-5 shadow-[10px] rounded-[10px] mt-5">
-
-
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-100/20 p-5 shadow-[10px] rounded-[10px] mt-5">
+        <!-- loader -->
 
       </div>
     </div>
