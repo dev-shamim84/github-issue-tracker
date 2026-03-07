@@ -16,8 +16,72 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body>
-  <h1>Home page</h1>
+<body class="bg-[#F8FAFC]">
+  <header class="bg-[#E9E9E9] py-3">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div>
+          <h2 class="flex gap-2 items-center"><img class="w-[40px]" src="./assets/github-logo.png" alt=""><span
+              class="font-bold text-xl">GitHub Issues
+              Tracker</span></h2>
+        </div>
+        <div>
+          <div class="join">
+            <div>
+              <label class="input validator join-item">
+                <input class="focus:border-none" type="text" placeholder="Search issues..." />
+              </label>
+              <div class="validator-hint hidden">Enter valid email address</div>
+            </div>
+            <button class="btn btn-primary join-item"><i class="fa-solid fa-plus"></i> New Issue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="py-10">
+    <div class="container mx-auto px-10">
+      <div class="bg-gray-100/20 p-4  shadow rounded">
+        <div class="flex flex-wrap gap-4">
+          <button onclick="activeButton('all')" id="all"
+            class="py-2 px-11 bg-blue-700 text-white cursor-pointer rounded ">All</button>
+          <button onclick="activeButton('open')" id="open"
+            class="py-2 bg-white text-black px-11 cursor-pointer rounded">Open</button>
+          <button onclick="activeButton('close')" id="close"
+            class="py-2  px-11 bg-white text-black  cursor-pointer rounded ">Close</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container mx-auto px-10">
+      <div class="bg-gray-100/20 p-2 flex flex-col md:flex-row justify-between items-center shadow">
+        <div class="flex gap-2 items-center">
+          <div><img src="./assets/Aperture.png" alt=""></div>
+          <div>
+            <h2 class="font-bold text-xl"><span id="issue"></span> Issues</h2>
+            <p class="text-neutral-500">Track and manage your project issues</p>
+          </div>
+        </div>
+        <div class="">
+          <span>Open</span>
+          <span>Close</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- card section -->
+  <section>
+    <div class="container mx-auto px-10">
+      <div id="card-container"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 bg-gray-100/20 p-5 shadow-[10px] rounded-[10px] mt-5">
+
+
+
+      </div>
+    </div>
+  </section>
+  <script src="./js/data.js"></script>
 </body>
 
 </html>
