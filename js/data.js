@@ -14,22 +14,22 @@ const loadData = async () => {
   displayData(data);
 };
 // active button
-// const activeButton = (id) => {
-//   // remove color
-//   allBtn.classList.remove("bg-blue-700", "text-white");
-//   openBtn.classList.remove("bg-blue-700", "text-white");
-//   closeBtn.classList.remove("bg-blue-700", "text-white");
+const activeButton = (id) => {
+  // remove color
+  allBtn.classList.remove("bg-blue-700", "text-white");
+  openBtn.classList.remove("bg-blue-700", "text-white");
+  closeBtn.classList.remove("bg-blue-700", "text-white");
 
-//   // add color
-//   allBtn.classList.add("bg-white", "text-black");
-//   openBtn.classList.add("bg-white", "text-black");
-//   closeBtn.classList.add("bg-white", "text-black");
+  // add color
+  allBtn.classList.add("bg-white", "text-black");
+  openBtn.classList.add("bg-white", "text-black");
+  closeBtn.classList.add("bg-white", "text-black");
 
-//   // add active color at selected button
-//   const selected = document.getElementById(id);
-//   selected.classList.add("bg-blue-700", "text-white");
-//   selected.classList.remove("bg-white", "text-black");
-// };
+  // add active color at selected button
+  const selected = document.getElementById(id);
+  selected.classList.add("bg-blue-700", "text-white");
+  selected.classList.remove("bg-white", "text-black");
+};
 
 openBtn.addEventListener("click", () => {
   const openData = data.filter((item) => item.status === "open");
