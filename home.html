@@ -44,11 +44,11 @@
       <div class="bg-gray-100/20 p-4  shadow rounded">
         <div class="flex flex-wrap gap-4">
           <button onclick="activeButton('all')" id="all"
-            class="py-2 px-11 bg-blue-700 text-white cursor-pointer rounded ">All</button>
+            class="py-2 font-semibold px-11 bg-blue-700 text-white cursor-pointer rounded ">All</button>
           <button onclick="activeButton('open')" id="open"
-            class="py-2 bg-white text-black px-11 cursor-pointer rounded">Open</button>
+            class="py-2 font-semibold bg-white text-black px-11 cursor-pointer rounded">Open</button>
           <button onclick="activeButton('close')" id="close"
-            class="py-2  px-11 bg-white text-black  cursor-pointer rounded ">Close</button>
+            class="py-2 font-semibold  px-11 bg-white text-black  cursor-pointer rounded ">Close</button>
         </div>
       </div>
     </div>
@@ -79,12 +79,27 @@
       </div>
 
       <div id="card-container"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-100/20 p-5 shadow-[10px] rounded-[10px] mt-5">
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-100/20 lg:px-10 lg:py-5 shadow-xl rounded-[10px] mt-5">
         <!-- loader -->
 
       </div>
     </div>
   </section>
+  <!-- Open the modal using ID.showModal() method -->
+  <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+  <dialog id="details_modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <div id="modal-container">
+
+      </div>
+      <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn btn-primary">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
   <script src="./js/data.js"></script>
 </body>
 
