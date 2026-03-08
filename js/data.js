@@ -194,7 +194,6 @@ const displayData = (data) => {
             <p class=" text-[#647488] font-semibold">${date}</p>
           </div>
         </div>
-
     `;
     cardContainer.appendChild(card);
   });
@@ -203,3 +202,17 @@ const displayData = (data) => {
 loadData();
 
 // Search functionality
+document.getElementById("search-btn").addEventListener("click", async () => {
+  const input = document.getElementById("search-input");
+  const inputValue = input.value;
+  const res = await fetch(
+    "https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications"
+  );
+  const data = await res.json();
+  const searchData = data.data.filter(
+    (item) =>
+      item.title.toLowerCase().includes(inputValue.trim().toLowerCase()) ||
+      item.description.toLowerCase().includes(inputValue.trim().toLowerCase())
+  );
+  displayData(searchData);
+});
