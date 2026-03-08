@@ -205,6 +205,10 @@ loadData();
 document.getElementById("search-btn").addEventListener("click", async () => {
   const input = document.getElementById("search-input");
   const inputValue = input.value;
+  if (!inputValue) {
+    alert("search something");
+    return;
+  }
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications"
   );
@@ -215,4 +219,5 @@ document.getElementById("search-btn").addEventListener("click", async () => {
       item.description.toLowerCase().includes(inputValue.trim().toLowerCase())
   );
   displayData(searchData);
+  input.value = "";
 });
